@@ -23,4 +23,8 @@
 Подсказка: Возможно, вам понадобится округление чисел и оператор %.
 */
 
-// Здесь пишем решение, данный комментарий необходимо стереть.
+const num = parseInt(prompt("Введите положительное целое число:"));
+const hundreds = Math.trunc(num / 100) % 10;
+const dozens = Math.trunc(num / 10) % 10;
+const units = num % 10;
+console.log(`В числе ${num} количество сотен: ${hundreds}, десятков: ${dozens}, единиц: ${units}`)
