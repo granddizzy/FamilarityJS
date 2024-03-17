@@ -23,7 +23,7 @@
 Подсказка: Возможно, вам понадобится округление чисел и оператор %.
 */
 
-const num = parseInt(prompt("Введите положительное целое число:"));
+const num = Number.parseInt(prompt("Введите положительное целое число:"));
 const hundreds = Math.trunc(num / 100) % 10;
 const dozens = Math.trunc(num / 10) % 10;
 const units = num % 10;
