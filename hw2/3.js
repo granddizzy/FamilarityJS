@@ -17,9 +17,7 @@
 const dayNumber = Number.parseInt(prompt("Введите целое число в интервале начиная с 1 и до 32 (не включая):"))
 if (dayNumber >= 1 && dayNumber < 32) {
   let decade = Math.ceil(dayNumber / 10);
-  if (decade === 4) {
-    decade = 3;
-  }
+  if (decade === 4) decade = 3;
   console.log(`Число ${dayNumber} попадает в ${decade} декаду месяца.`);
 } else {
   console.log(`Неверное значение`);
