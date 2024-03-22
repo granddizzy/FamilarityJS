@@ -14,4 +14,59 @@
 не окажется, значит нужно будет вывести пустой массив.
 */
 
-// Здесь пишем решение, данный комментарий необходимо стереть.
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function arrGenerate(size) {
+  const arr = [];
+  for (let i = 0; i < size; i++) {
+    arr[i] = getRandomInt(0, 10);
+  }
+  return arr;
+}
+
+function arrSum(arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+  }
+  return sum;
+}
+
+function arrMin(arr) {
+  if (arr.length === 0) {
+    return undefined;
+  }
+
+  if (arr.length === 1) {
+    return arr[0];
+  }
+
+  let min = arr[0];
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] < min) {
+      min = arr[i];
+    }
+  }
+
+  return min;
+}
+
+function findIndexesOfValue(arr, val) {
+  const findIndexes = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === val) {
+      findIndexes.push(i);
+    }
+  }
+  return findIndexes;
+}
+
+const arr = arrGenerate(5);
+console.log(arr);
+console.log(arrSum(arr));
+console.log(arrMin(arr));
+console.log(findIndexesOfValue(arr, 3));
