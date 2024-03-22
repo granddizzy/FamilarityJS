@@ -8,9 +8,9 @@ function round5(val) {
 
   if (Math.abs(remainder) < 2.5) {
     return val - remainder;
-  } else {
-    return val + ((val >= 0 ? 5: -5) - remainder);
   }
+
+  return val + ((val >= 0 ? 5: -5) - remainder);
 }
 
 console.log(round5(0)); // 0
