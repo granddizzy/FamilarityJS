@@ -12,4 +12,10 @@ xxxx
 xxxxx
 */
 
-// Здесь пишем решение, данный комментарий необходимо стереть.
+for (let i = 1; i <= 20; i++) {
+  let myStr = '';
+  for (let j = 1; j < i; j++) {
+    myStr += 'x';
+  }
+  console.log(myStr);
+}
