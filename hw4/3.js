@@ -30,9 +30,9 @@ function arrGenerate(size) {
 
 function getArrSum(arr) {
   let sum = 0;
-  arr.forEach(function (val) {
+  for (const val of arr) {
     sum += val;
-  });
+  }
   return sum;
 }
 
