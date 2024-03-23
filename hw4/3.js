@@ -28,20 +28,18 @@ function arrGenerate(size) {
   return arr;
 }
 
-function arrSum(arr) {
+function getArrSum(arr) {
   let sum = 0;
-  for (let i = 0; i < arr.length; i++) {
-    sum += arr[i];
-  }
+  arr.forEach(function (val) {
+    sum += val;
+  });
   return sum;
 }
 
-function arrMin(arr) {
+function getArrMin(arr) {
   if (arr.length === 0) {
     return undefined;
-  }
-
-  if (arr.length === 1) {
+  } else if (arr.length === 1) {
     return arr[0];
   }
 
@@ -55,18 +53,18 @@ function arrMin(arr) {
   return min;
 }
 
-function findIndexesOfValue(arr, val) {
+function getIndexesOfValue(arr, val) {
   const findIndexes = [];
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] === val) {
-      findIndexes.push(i);
+  arr.forEach(function (arrVal, index) {
+    if (arrVal === val) {
+      findIndexes.push(index);
     }
-  }
+  });
   return findIndexes;
 }
 
 const arr = arrGenerate(5);
 console.log(arr);
-console.log(arrSum(arr));
-console.log(arrMin(arr));
-console.log(findIndexesOfValue(arr, 3));
+console.log(getArrSum(arr));
+console.log(getArrMin(arr));
+console.log(getIndexesOfValue(arr, 3));
