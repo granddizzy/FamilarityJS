@@ -10,4 +10,11 @@
 три числа. Проверять их не нужно.
 */
 
-// Здесь пишем решение, данный комментарий необходимо стереть.
+function showMax(num1, num2, num3) {
+  console.log(`Максимальное значение среди чисел ${num1}, ${num2}, ${num3} равно ${Math.max(num1, num2, num3)}`);
+}
+
+const num1 = Number.parseFloat(prompt('Введите число №1'));
+const num2 = Number.parseFloat(prompt('Введите число №2'));
+const num3 = Number.parseFloat(prompt('Введите число №3'));
+showMax(num1, num2, num3);

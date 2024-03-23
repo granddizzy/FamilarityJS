@@ -9,4 +9,18 @@
 сообщение "Размер заработной платы за вычетом налогов равен N."
 */
 
-// Здесь пишем решение, данный комментарий необходимо стереть.
+function showTaxFreeSalary(salary) {
+  console.log(`Размер заработной платы за вычетом налогов равен ${(salary * 0.87).toFixed(2)}`);
+}
+
+const inputSalary = prompt('Введите размер зарплаты');
+if (inputSalary !== null) {
+  const salary = Number.parseFloat(inputSalary);
+  if (Number.isNaN(salary) || salary <= 0 || !Number.isFinite(salary)) {
+    console.log(`Значение задано неверно`);
+  } else {
+    showTaxFreeSalary(salary)
+  }
+} else {
+  console.log(`Ввод отменен`);
+}

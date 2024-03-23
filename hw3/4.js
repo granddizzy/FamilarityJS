@@ -18,4 +18,43 @@ console.log(sum(2, 6)); должно вывести число 8 в консол
 Демонстрировать работы функций не обязательно.
 */
 
-// Здесь пишем решение, данный комментарий необходимо стереть.
+/**
+ * Функция складывает числа
+ * @param num1 number
+ * @param num2 number
+ * @returns {number}
+ */
+function sum(num1, num2) {
+  return num1 + num2;
+}
+
+/**
+ * Функция вычитает меньшее число из большего
+ * @param num1 number
+ * @param num2 number
+ * @returns {number}
+ */
+function diff(num1, num2) {
+  return Math.abs(num1 - num2);
+}
+
+/**
+ * Функция делит большее число на меньшее
+ * @param num1 number
+ * @param num2 number
+ * @returns {number}
+ */
+function div(num1, num2) {
+  return Math.max(num1, num2) / Math.min(num1, num2);
+}
+
+/**
+ * Функция умножает одно число на другое
+ * @param num1 number
+ * @param num2 number
+ * @returns {number}
+ */
+function mult(num1, num2) {
+  return num1 * num2;
+}
+

@@ -7,4 +7,16 @@
 который получаем от функции, в консоль.
 */
 
-// Здесь пишем решение, данный комментарий необходимо стереть.
+// комментарий оставлен для примера
+// function getThirdDegree(num) {
+//   return num ** 3;
+// }
+const getThirdDegree = num => num ** 3;
+
+const inputNum = prompt('Введите число');
+const num = Number.parseFloat(inputNum);
+if (Number.isNaN(num)) {
+  console.log(`${inputNum} это не число!!!`);
+} else {
+  console.log(`Число ${num} в кубе равно ${getThirdDegree(num)}`);
+}
