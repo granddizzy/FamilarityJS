@@ -31,4 +31,5 @@ const products = [
   },
 ];
 
-// Здесь пишем решение, данный комментарий необходимо стереть.
+console.log(products.filter(value => 'photos' in value));
+console.log(products.sort((obj1, obj2) => obj1.price - obj2.price));

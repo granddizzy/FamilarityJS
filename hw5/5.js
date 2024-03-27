@@ -17,4 +17,8 @@ const ru = [
   "воскресенье",
 ];
 
-// Здесь пишем решение, данный комментарий необходимо стереть.
+const translator = {};
+for (let i = 0; i < en.length; i++) {
+  translator[en[i]] = ru[i];
+}
+console.log(translator);
